@@ -4,5 +4,5 @@ Deep Learning Laboratory experiments completed as part of the B.Tech Artificial 
 
 ## Navigation
 
-- [Lab 1 – Implementation of a Single Layer Perceptron for Binary Classification](./Lab-1)
+- [Lab 1 – Implementation of a Single Layer Perceptron for Binary Classification](./Lab 1)
 
