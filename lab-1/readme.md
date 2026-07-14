@@ -15,7 +15,6 @@ Implement a Single Layer Perceptron from scratch for binary classification using
 - **Features:** 4 Numerical Features
 - **Classes:** 2
 
-Place the dataset file (`data_banknote_authentication.txt`) in the same directory as the notebook before execution.
 
 ---
 
