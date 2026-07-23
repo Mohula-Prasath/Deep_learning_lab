@@ -23,7 +23,7 @@ Implement a Multi-Layer Perceptron (MLP) using TensorFlow/Keras for multi-class 
 ```
 Lab-2/
 │
-├── lab2.ipynb
+├── dl_lab_2.ipynb
 ├── requirements.txt
 ├── README.md
 ├── plots_lab_2/
