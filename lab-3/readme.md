@@ -104,7 +104,7 @@ Lab-3/
 ├── requirements.txt
 ├── README.md
 ├── dl_lab_3.pdf
-├── images/
+├── plots/
 ```
 
 ---
