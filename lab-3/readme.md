@@ -103,7 +103,6 @@ Lab-3/
 ├── lab3.ipynb
 ├── requirements.txt
 ├── README.md
-├── dl_lab_3.pdf
 ├── plots/
 ```
 
