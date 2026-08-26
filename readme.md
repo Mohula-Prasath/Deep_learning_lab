@@ -11,3 +11,5 @@ Deep Learning Laboratory experiments completed as part of the B.Tech Artificial 
 * [Lab 3 – Implementation of a Convolutional Neural Network (CNN) for Image Classification](./lab-3)
 
 * [Lab 4 – Comparative Study of Deep Convolutional Neural Network Architectures Using Transfer Learning](./lab-4)
+
+* [Lab 5 – Comprehensive Study of CNN Training, Regularization, Optimization, Hyperparameter Tuning, Transfer Learning and Cross-Validation](./lab-5)
