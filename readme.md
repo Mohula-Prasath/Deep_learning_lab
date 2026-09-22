@@ -13,3 +13,5 @@ Deep Learning Laboratory experiments completed as part of the B.Tech Artificial 
 * [Lab 4 – Comparative Study of Deep Convolutional Neural Network Architectures Using Transfer Learning](./lab-4)
 
 * [Lab 5 – Comprehensive Study of CNN Training, Regularization, Optimization, Hyperparameter Tuning, Transfer Learning and Cross-Validation](./lab-5)
+
+* [Lab 6 – RNN, LSTM and GRU for Sequence Classification, CNN-LSTM/GRU Video Classification, and Sequence-to-Sequence Learning](./lab-6)
