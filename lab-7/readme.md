@@ -1,0 +1,476 @@
+**# CS3807 – Deep Learning Laboratory**
+
+**## Experiment 7**
+
+**\*\*Comprehensive Study of Autoencoders, Convolutional Autoencoders, Denoising Autoencoders and Variational Autoencoders\*\***
+
+**### Objective**
+
+Study autoencoder-based architectures for image representation learning and reconstruction. The experiment covers fully connected autoencoders, convolutional autoencoders, denoising autoencoders and variational autoencoders, along with latent-space analysis, reconstruction quality, noise removal, image generation and latent-space interpolation.
+
+**---**
+
+**## Additional Analysis**
+
+The experiment compares model performance across several studies:
+
+\* Fully Connected Autoencoder (FC AE)
+
+\* Convolutional Autoencoder (Conv AE)
+
+\* Denoising Convolutional Autoencoder (Denoising CAE)
+
+\* Variational Autoencoder (VAE)
+
+\* Effect of latent dimension on reconstruction
+
+\* Effect of Gaussian noise level on denoising performance
+
+\* Reconstruction quality comparison
+
+\* Latent-space visualization
+
+\* VAE image generation
+
+\* Latent-space interpolation
+
+\* Reconstruction-error analysis
+
+\* High-reconstruction-error image analysis
+
+The analysis includes:
+
+\* Original and reconstructed images
+
+\* Training and validation loss curves
+
+\* FC AE and Conv AE reconstruction comparison
+
+\* Clean, noisy and denoised images
+
+\* Noise-level performance comparison
+
+\* VAE latent-space visualization
+
+\* Randomly generated VAE samples
+
+\* Latent-space interpolation
+
+\* VAE training and validation reconstruction loss
+
+\* Reconstruction-error distribution
+
+\* High-error reconstruction examples
+
+**---**
+
+**## Dataset**
+
+**### Main Experiment**
+
+The notebook uses image data for unsupervised representation learning and reconstruction.
+
+\* **\*\*Input:\*\*** Grayscale handwritten digit images
+
+\* **\*\*Task:\*\*** Image reconstruction and representation learning
+
+\* **\*\*Train/Validation/Test:\*\*** Training, validation and test splits are used
+
+The same image data is used to study deterministic and probabilistic latent representations.
+
+**---**
+
+**## Model Architecture**
+
+**### Fully Connected Autoencoder**
+
+The fully connected autoencoder consists of:
+
+\`\`\`text
+
+Input Image
+
+        ↓
+
+Encoder
+
+        ↓
+
+Latent Representation
+
+        ↓
+
+Decoder
+
+        ↓
+
+Reconstructed Image
+
+\`\`\`
+
+The encoder compresses the input image into a lower-dimensional latent representation, while the decoder reconstructs the image from the latent representation.
+
+**### Convolutional Autoencoder**
+
+The convolutional autoencoder uses convolutional layers to preserve spatial information during encoding and decoding.
+
+\`\`\`text
+
+Input Image
+
+        ↓
+
+Convolutional Encoder
+
+        ↓
+
+Latent Representation
+
+        ↓
+
+Convolutional Decoder
+
+        ↓
+
+Reconstructed Image
+
+\`\`\`
+
+**### Denoising Autoencoder**
+
+The denoising autoencoder receives corrupted images as input and learns to reconstruct the corresponding clean images.
+
+\`\`\`text
+
+Clean Image
+
+        ↓
+
+Gaussian Noise
+
+        ↓
+
+Noisy Image
+
+        ↓
+
+Denoising Autoencoder
+
+        ↓
+
+Reconstructed Clean Image
+
+\`\`\`
+
+**### Variational Autoencoder**
+
+The VAE learns a probabilistic latent representation using the latent mean and variance.
+
+\`\`\`text
+
+Input Image
+
+        ↓
+
+Encoder
+
+        ↓
+
+μ and log σ²
+
+        ↓
+
+Sampling / Reparameterization
+
+        ↓
+
+Latent Vector z
+
+        ↓
+
+Decoder
+
+        ↓
+
+Reconstructed Image
+
+\`\`\`
+
+**---**
+
+**## Training Configuration**
+
+\* **\*\*Optimizer:\*\*** Adam
+
+\* **\*\*Reconstruction Objective:\*\*** Image reconstruction
+
+\* **\*\*Evaluation:\*\*** MSE, MAE and SSIM
+
+\* **\*\*Latent Dimensions Studied:\*\*** 2, 8, 16 and 32
+
+The same evaluation measures are used to compare reconstruction quality across the different autoencoder models.
+
+**---**
+
+**## Latent Dimension Analysis**
+
+The experiment studies the effect of latent representation size using:
+
+\* Latent dimension 2
+
+\* Latent dimension 8
+
+\* Latent dimension 16
+
+\* Latent dimension 32
+
+The analysis compares reconstruction MSE, SSIM and parameter count to study the trade-off between compression and reconstruction quality.
+
+**---**
+
+**## Denoising Analysis**
+
+Gaussian noise is introduced into the input images at different noise levels.
+
+The denoising autoencoder is evaluated using:
+
+\* Mean Squared Error (MSE)
+
+\* Mean Absolute Error (MAE)
+
+\* Structural Similarity Index (SSIM)
+
+The experiment examines how increasing noise affects reconstruction quality and how the denoising autoencoder recovers the underlying image structure.
+
+**---**
+
+**## Variational Autoencoder Analysis**
+
+The VAE experiment studies probabilistic latent representations and generative image modelling.
+
+The analysis includes:
+
+\* Reconstruction loss
+
+\* KL divergence loss
+
+\* Total VAE loss
+
+\* Test-set reconstruction error
+
+\* Latent-space visualization
+
+\* Random image generation
+
+\* Latent-space interpolation
+
+The latent representation is regularized toward a standard normal distribution, allowing new samples to be generated by sampling from the latent space.
+
+**---**
+
+**## Reconstruction Error Analysis**
+
+Per-image reconstruction error is calculated on the test set using mean squared error:
+
+\[
+e_i=
+\frac{1}{D}
+\sum_{j=1}^{D}
+(x_{ij}-\hat{x}_{ij})^2.
+\]
+
+The experiment analyses:
+
+\* Distribution of reconstruction errors
+
+\* Typical reconstruction-error range
+
+\* High-error samples
+
+\* Visual quality of high-error reconstructions
+
+\* Relationship between numerical reconstruction error and visual reconstruction quality
+
+**---**
+
+**## Project Structure**
+
+\`\`\`text
+
+Lab-7/
+
+│
+
+├── lab-7.ipynb
+
+├── requirements.txt
+
+├── README.md
+
+├── plots/
+
+\`\`\`
+
+**---**
+
+**## Installation**
+
+Create a virtual environment (recommended):
+
+\`\`\`bash
+
+python -m venv .venv
+
+\`\`\`
+
+Activate it.
+
+**\*\*Windows\*\***
+
+\`\`\`bash
+
+.venv\Scripts\activate
+
+\`\`\`
+
+**\*\*Linux/macOS\*\***
+
+\`\`\`bash
+
+source .venv/bin/activate
+
+\`\`\`
+
+Install the required packages:
+
+\`\`\`bash
+
+pip install -r requirements.txt
+
+\`\`\`
+
+**---**
+
+**## Execution**
+
+Launch Jupyter Notebook:
+
+\`\`\`bash
+
+jupyter notebook
+
+\`\`\`
+
+Open:
+
+\`\`\`text
+
+lab-7.ipynb
+
+\`\`\`
+
+Run all cells sequentially.
+
+**---**
+
+**## Output**
+
+The notebook generates the following outputs.
+
+**### Autoencoder Analysis**
+
+\* Original and reconstructed images
+
+\* Training and validation loss curves
+
+\* Latent representations
+
+\* Reconstruction metrics
+
+**### Convolutional Autoencoder Analysis**
+
+\* Convolutional reconstruction results
+
+\* Reconstruction quality comparison
+
+\* Latent-space representations
+
+**### Denoising Autoencoder Analysis**
+
+\* Clean images
+
+\* Noisy images
+
+\* Denoised reconstructions
+
+\* Noise-level performance comparison
+
+**### Variational Autoencoder Analysis**
+
+\* VAE reconstruction results
+
+\* VAE latent-space visualization
+
+\* Randomly generated images
+
+\* Latent-space interpolation
+
+\* Reconstruction and KL losses
+
+**### Reconstruction Analysis**
+
+\* MSE
+
+\* MAE
+
+\* SSIM
+
+\* Reconstruction-error distribution
+
+\* High-error reconstruction examples
+
+\* Latent-dimension performance comparison
+
+**---**
+
+**## Software Requirements**
+
+\* Python 3.10 or later
+
+\* Jupyter Notebook
+
+\* TensorFlow
+
+\* NumPy
+
+\* Pandas
+
+\* Matplotlib
+
+\* Seaborn
+
+\* Scikit-learn
+
+\* OpenCV
+
+**---**
+
+**## GitHub Repository**
+
+The complete source code and notebook for this experiment are available in the `lab-7` folder of the GitHub repository.
+
+\`\`\`text
+
+[https://github.com/Mohula-Prasath/Deep_learning_lab/tree/main/lab-7](https://github.com/Mohula-Prasath/Deep_learning_lab/tree/main/lab-7)
+
+\`\`\`
+
+**---**
+
+**## Course Information**
+
+**\*\*Course:\*\*** CS3807 – Deep Learning Laboratory
+
+**\*\*Institution:\*\*** Shiv Nadar University Chennai
+
+**\*\*Semester:\*\*** V (AY 2026–27)

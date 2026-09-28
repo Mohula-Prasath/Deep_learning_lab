@@ -2,7 +2,7 @@
 
 Deep Learning Laboratory experiments completed as part of the B.Tech Artificial Intelligence & Data Science curriculum at Shiv Nadar University Chennai.
 
-## Navigation
+**## Navigation**
 
 * [Lab 1 – Implementation of a Single Layer Perceptron for Binary Classification](./lab-1)
 
@@ -15,3 +15,5 @@ Deep Learning Laboratory experiments completed as part of the B.Tech Artificial 
 * [Lab 5 – Comprehensive Study of CNN Training, Regularization, Optimization, Hyperparameter Tuning, Transfer Learning and Cross-Validation](./lab-5)
 
 * [Lab 6 – RNN, LSTM and GRU for Sequence Classification, CNN-LSTM/GRU Video Classification, and Sequence-to-Sequence Learning](./lab-6)
+
+* [Lab 7 – Comprehensive Study of Autoencoders, Convolutional Autoencoders, Denoising Autoencoders and Variational Autoencoders](./lab-7)
