@@ -1,3 +1,4 @@
+
 # CS3807 – Deep Learning Laboratory
 
 Deep Learning Laboratory experiments completed as part of the B.Tech Artificial Intelligence & Data Science curriculum at Shiv Nadar University Chennai.
@@ -17,3 +18,5 @@ Deep Learning Laboratory experiments completed as part of the B.Tech Artificial 
 * [Lab 6 – RNN, LSTM and GRU for Sequence Classification, CNN-LSTM/GRU Video Classification, and Sequence-to-Sequence Learning](./lab-6)
 
 * [Lab 7 – Comprehensive Study of Autoencoders, Convolutional Autoencoders, Denoising Autoencoders and Variational Autoencoders](./lab-7)
+
+* [Lab 8 – Effect of Attention Type and Attention Position in a Pretrained ResNet50](./lab-8)
